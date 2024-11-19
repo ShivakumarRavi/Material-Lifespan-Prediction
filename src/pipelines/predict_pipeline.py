@@ -79,5 +79,8 @@ class CustomData:
                 "InitialPosition": [self.InitialPosition],
                 "FormationMethod": [self.FormationMethod],
             }
+
+            return pd.DataFrame(custom_data_input_dict)
+
         except Exception as exp:
             raise CustomException(exp, sys)
